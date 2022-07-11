@@ -1,4 +1,4 @@
-using System;
+ using System;
 using UnityEngine;
 
 [Serializable] 
@@ -57,20 +57,59 @@ public class Stats
 
 
 
+
+
 public class JsonManager : MonoBehaviour
 {
     public TextAsset textAsset;
     void Start()
     {
+        Ahri ahri = new Ahri();
+        Akali akali = new Akali();
+        Alister alister = new Alister();
+        Amumu amumu = new Amumu();
+        Ashe ashe = new Ashe();
+
+
         Debug.Log(textAsset.text);
         ChampionClasses c = new ChampionClasses();
         c = JsonUtility.FromJson<ChampionClasses>(textAsset.text);
+
+        
         Debug.Log(c.champs.Length);
         
+
         foreach (var ch in c.champs)
         {
-            Debug.Log(ch.name);
-            // TODO Something
+            if (ahri.Name == ch.name)
+            {
+                ahri.ImportChar(ch);
+            }
+            else if (akali.Name == ch.name)
+            {
+                akali.ImportChar(ch);
+            }
+            else if (amumu.Name == ch.name)
+            {
+                amumu.ImportChar(ch);
+            }
+            else if (alister.Name == ch.name)
+            {
+                alister.ImportChar(ch);
+            }
+            else if (ashe.Name == ch.name)
+            {
+                ashe.ImportChar(ch);
+            }
+
         }
-    }
+
+                    // TODO Something   
+        }
+ 
+
+
 }
+    
+
+
