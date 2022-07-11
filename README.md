@@ -1,3 +1,2 @@
 # wjthinkbig_starters 
-
-Daily assignment repo
+wjthinkbig_starters 
