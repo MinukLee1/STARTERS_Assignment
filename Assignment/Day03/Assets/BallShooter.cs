@@ -44,6 +44,11 @@ public class BallShooter : MonoBehaviour
 
     private void Update()
     {
+        if(fired == true)
+        {
+            return;
+        }
+
         powerSlider.value = minForce;
 
         if(currentForce >= maxForce && !fired)
@@ -54,6 +59,7 @@ public class BallShooter : MonoBehaviour
         }
         else if (Input.GetButtonDown("Fire1"))
         {
+            fired = false;
             currentForce = minForce;
 
             shootingAudio.clip = chargingClip;

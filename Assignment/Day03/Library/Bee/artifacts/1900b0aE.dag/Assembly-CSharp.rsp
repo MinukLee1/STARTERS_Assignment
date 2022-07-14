@@ -359,7 +359,9 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Ball.cs"
 "Assets/BallShooter.cs"
+"Assets/CamFollow.cs"
 "Assets/EffectExamples/Misc Effects/Scripts/SpawnEffect.cs"
+"Assets/GameManager.cs"
 "Assets/Prop.cs"
 "Assets/Shared/Ramps/Runtime/RampAsset.cs"
 "Assets/Shared/Scripts/AdjustTimeScale.cs"
@@ -367,6 +369,7 @@
 "Assets/Shared/Scripts/SimpleCameraController.cs"
 "Assets/Shared/Scripts/SimpleCharacterMotor.cs"
 "Assets/ShooterRotator.cs"
+"Assets/SpwanGenerator.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 

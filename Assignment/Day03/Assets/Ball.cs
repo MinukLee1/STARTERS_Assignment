@@ -48,12 +48,12 @@ public class Ball : MonoBehaviour
 
         //explosionPartcle의 부모를 null = 자식의 부모를 없앰 = 자식이 부모에서 떨어져나감 
         // -> 부모인 Ball이 충돌하여 없어지면, 자식의 Parent를 null로 하여 파티클은 떨어져나가도록 설정
-        explosionParticle.transform.parent = null;
+        //explosionParticle.transform.parent = null4;
 
         explosionParticle.Play();
         explosionAudio.Play();
 
-        //Destroy(explosionParticle.gameObject,explosionParticle.duration);
+        Destroy(explosionParticle.gameObject,explosionParticle.duration);
         Destroy(gameObject);
     }
 

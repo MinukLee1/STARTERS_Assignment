@@ -18,6 +18,8 @@ public class ShooterRotator : MonoBehaviour
 
     public float horizontalRotateSpeed = 360f;
 
+    public BallShooter ballShooter;
+
 
     //0 = Idle취급  1= Ready 취급 2= Horizontal 취급 
 
@@ -53,10 +55,20 @@ public class ShooterRotator : MonoBehaviour
                 else if (Input.GetButtonUp("Fire1"))
                 {
                     state = RotateState.Ready;
+
+                    //ballshooter를 가져와서, 만약 위처럼 state가 Ready일 경우. ballshooter도 준비시킴
+                    ballShooter.enabled = true;
                 }
                 break;
             case RotateState.Ready:
                 break;
         }
+    }
+
+    private void OnEnable()
+    {
+        transform.rotation = Quaternion.identity; // (identiity : 0,0,0 ) (=Reset)
+        state = RotateState.Idle;
+        ballShooter.enabled = false;
     }
 }
