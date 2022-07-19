@@ -82,10 +82,12 @@ public class JsonManager : MonoBehaviour
         foreach (var ch in c.champs)
         {
             Debug.Log(ch);
+
+            //어셈블리 
             //var subType = Assembly.GetAssembly(typeof(Champion)).GetTypes().Where(t => t.IsSubclassOf(typeof(Champion)));
 
 
-
+            // Json파일 name <=> 클래스타입 : 동적할당수행(상속 생성자 ch 포함)
             Type type = Type.GetType(ch.name);
             Debug.Log(ch.name);
             object obj = Activator.CreateInstance(type, ch);

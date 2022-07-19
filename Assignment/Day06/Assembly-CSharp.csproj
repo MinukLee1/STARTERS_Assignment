@@ -63,8 +63,8 @@
     <Compile Include="Assets\Day2 Assignment\Ahri.cs" />
     <Compile Include="Assets\Day2 Assignment\Akali.cs" />
     <Compile Include="Assets\Day2 Assignment\Amumu.cs" />
-    <Compile Include="Assets\Day2 Assignment\ICharacter.cs" />
     <Compile Include="Assets\Day2 Assignment\Annie.cs" />
+    <Compile Include="Assets\Day2 Assignment\ICharacter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
